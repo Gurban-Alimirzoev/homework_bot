@@ -159,10 +159,11 @@ def main():
             message = parse_status(homework)
             current_timestamp = response.get('current_date')
         except Exception as error:
-            message = f'Сбой в работе телеграмм-бота: {error}'
-            logger.critical(
-                f'Уведомление об ошибке отправлено в чат {message}'
-            )
+            #message = f'Сбой в работе телеграмм-бота: {error}'
+            #logger.critical(
+            #    f'Уведомление об ошибке отправлено в чат {message}'
+            #)
+            pass
         finally:
             if message in cache:
                 logger.debug('Новых статусов нет')
